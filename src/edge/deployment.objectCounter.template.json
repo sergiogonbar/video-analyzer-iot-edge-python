@@ -3,17 +3,17 @@
   "modulesContent": {
     "$edgeAgent": {
       "properties.desired": {
-        "schemaVersion": "1.0",
+        "schemaVersion": "1.1",
         "runtime": {
           "type": "docker",
           "settings": {
             "minDockerVersion": "v1.25",
             "loggingOptions": "",
             "registryCredentials": {
-              "$CONTAINER_REGISTRY_USERNAME_myacr": {
-                "username": "$CONTAINER_REGISTRY_USERNAME_myacr",
-                "password": "$CONTAINER_REGISTRY_PASSWORD_myacr",
-                "address": "$CONTAINER_REGISTRY_USERNAME_myacr.azurecr.io"
+              "avasampleregistryq7paiyqngcrfw": {
+                "username": "setdockerid2022",
+                "password": "Setaka1984",
+                "address": "sergio.gonzalezbargueno@myclouddoor.com"
               }
             }
           }
@@ -129,7 +129,7 @@
     },
     "$edgeHub": {
       "properties.desired": {
-        "schemaVersion": "1.0",
+        "schemaVersion": "1.2",
         "routes": {
           "ObjectCounterToIoTHub": "FROM /messages/modules/objectCounter/outputs/* INTO $upstream",
           "AVAToIoTHub": "FROM /messages/modules/avaedge/outputs/* INTO $upstream",

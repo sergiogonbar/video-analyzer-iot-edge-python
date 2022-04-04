@@ -24,7 +24,7 @@
         {
             "opName": "pipelineTopologySet",
             "opParams": {
-                "pipelineTopologyUrl": "https://<update_url_to_topology.json>"
+                "pipelineTopologyUrl": "https://raw.githubusercontent.com/Azure/video-analyzer/main/pipelines/live/topologies/httpExtension/topology.json"
             }
         },
         {
@@ -32,9 +32,11 @@
             "opParams": {
                 "name": "Sample-Pipeline-1",
                 "properties": {
-                    "topologyName": "TopologyName",
+                    "topologyName": "InferencingWithHttpExtension",
                     "description": "Sample pipeline description",
                     "parameters": [
+                        {"name": "inferencingUrl","value": "http://cv/score"},
+
                         {
                             "name": "rtspUrl",
                             "value": "rtsp://rtspsim:554/media/camera-300s.mkv"
@@ -92,7 +94,7 @@
         {
             "opName": "pipelineTopologyDelete",
             "opParams": {
-                "name": "TopologyName"
+                "name": "InferencingWithHttpExtension"
             }
         },
         {
